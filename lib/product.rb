@@ -39,11 +39,10 @@ class Product
 				count += 1
 			end
 		end 
-		# LEGO Iron Man vs. Ultron already exists. (DuplicateProductError)
 		if count == 0
 			@@products << self
 		else
-			raise DuplicateProductError, "#{@title} already exists Kelly."
+			raise DuplicateProductError, "#{@title} already exists."
 		end		
 	end	
 
