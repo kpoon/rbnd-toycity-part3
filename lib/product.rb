@@ -1,5 +1,5 @@
 class Product
-	attr_reader :title
+	attr_reader :title, :price, :stock
 
 	@@products = []
 
@@ -24,8 +24,11 @@ class Product
 	end		
 
 	#need to create in_stock? instance method returns true or false
-
-	#need in_stock class method
+	def in_stock?
+		@stock > 0		
+	end	
+	
+	
 
 	private
 
@@ -43,4 +46,10 @@ class Product
 			raise DuplicateProductError, "#{@title} already exists Kelly."
 		end		
 	end	
+
+	#need in_stock class method
+	def self.in_stock
+		@@products.delete_if {|product| product.stock == 0 }	
+	end	
+
 end	
