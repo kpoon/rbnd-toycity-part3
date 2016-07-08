@@ -18,6 +18,14 @@ class Customer
 				return customer
 			end
 		end
+	end	
+
+	def purchase(product)
+		if product.in_stock?
+			Transaction.new(@name, product)
+		else
+			raise OutOfStockError, "'#{product.title}' is out of stock."	
+		end	
 	end		
 
 	private

@@ -28,7 +28,9 @@ class Product
 		@stock > 0		
 	end	
 	
-	
+	def decrease_stock
+		@stock -= 1
+	end
 
 	private
 
