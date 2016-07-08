@@ -1,5 +1,5 @@
 class Transaction
-	attr_reader :id, :customer, :product
+	attr_reader :id, :customer, :product, :purchase_date
 	@@transactions = []
 	@@id = 1
 
@@ -8,6 +8,7 @@ class Transaction
         @@id += 1
 		@customer = customer
 		@product = product
+		@purchase_date = Time.now.strftime("%m-%d-%Y")
 		add_to_transactions
 	end	
 
@@ -23,14 +24,12 @@ class Transaction
 		end
 	end		
 	
-
 	private
 
 	def add_to_transactions
 		@product.decrease_stock
 		@@transactions << self
 	end	
-
 end	
 
 

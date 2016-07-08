@@ -63,3 +63,14 @@ puts transaction2.product == nanoblock # Should return true
 
 # walter.purchase(firehouse)
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
+
+# Feature 1, add more infor to Customer
+Customer.new(name: "Zoe Smith", age: 35, sex: "Female")
+zoe = Customer.find_by_name("Zoe Smith")
+puts zoe.name
+puts zoe.age
+puts zoe.sex
+
+# Feature 2, add purchase date to purchases
+puts "The first transaction was made on #{transaction.purchase_date}"
+

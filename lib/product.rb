@@ -52,5 +52,4 @@ class Product
 	def self.in_stock
 		@@products.delete_if {|product| product.stock == 0 }	
 	end	
-
 end	

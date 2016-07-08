@@ -1,10 +1,12 @@
 class Customer
-	attr_reader :name
+	attr_reader :name, :age, :sex
 
 	@@customers = []
 
 	def initialize(options={})
 		@name = options[:name]
+		@age = options[:age]
+		@sex = options[:sex]
 		add_to_customers
 	end	
 
@@ -26,7 +28,7 @@ class Customer
 		else
 			raise OutOfStockError, "'#{product.title}' is out of stock."	
 		end	
-	end		
+	end	
 
 	private
 
@@ -43,7 +45,5 @@ class Customer
 			raise DuplicateCustomerError, "'#{@name}' already exists."
 		end		
 	end	
-
-
 end	
 
