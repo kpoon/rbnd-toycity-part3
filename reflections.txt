@@ -1,4 +1,15 @@
 1) How long did you spend working on this project?
+About 8 hours.
+
 2) What was the most rewarding challenge you conquered?
+Learning how to create and use classes and objects.  There were times I did not know in which class I should create a method.  Also the ease of writing code with Ruby.  Several times I didn’t know where to start but I “think” it should work this way and it does!
+
 3) What two additional features did you build? Why?
+Feature #1 - More details about customers
+Because we only had the customer’s name.  Would help to know their age and sex.  As a business it always helps to understand the customer base.
+
+Feature #2 - Added purchase date
+We only had the customer and product that was purchased.  Would help to know when the purchase was made.  
+
 4) Where do you still have room to grow?
+I still have a lot of Ruby to learn!
