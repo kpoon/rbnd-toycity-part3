@@ -17,11 +17,7 @@ class Transaction
 	end	
 
 	def self.find(search_id)
-		@@transactions.each do |transaction|
-			if transaction.id == search_id
-				return transaction
-			end
-		end
+		@@transactions.find {|transaction| transaction.id == search_id}
 	end		
 	
 	private

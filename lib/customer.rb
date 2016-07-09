@@ -33,17 +33,22 @@ class Customer
 	private
 
 	def add_to_customers
-		count = 0
-		@@customers.each do |customer|
-			if customer.name == @name
-				count += 1
-			end
-		end 
-		if count == 0
-			@@customers << self
-		else
+		# count = 0
+		# @@customers.each do |customer|
+		# 	if customer.name == @name
+		# 		count += 1
+		# 	end
+		# end 
+		# if count == 0
+		# 	@@customers << self
+		# else
+		# 	raise DuplicateCustomerError, "'#{@name}' already exists."
+		# end	
+		if @@customers.find {|customer| customer.name == @name}
 			raise DuplicateCustomerError, "'#{@name}' already exists."
-		end		
+		else
+			@@customers << self
+		end				
 	end	
 end	
 

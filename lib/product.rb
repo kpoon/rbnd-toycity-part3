@@ -50,6 +50,7 @@ class Product
 
 	#need in_stock class method
 	def self.in_stock
-		@@products.delete_if {|product| product.stock == 0 }	
+		# @@products.delete_if {|product| product.stock == 0 }	
+		@@products.select{|product| product.stock > 0}
 	end	
 end	
